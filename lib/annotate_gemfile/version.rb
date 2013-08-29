@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 module AnnotateGemfile
-  module VERSION
+  class Version
     MAJOR = 0
     MINOR = 1
     PATCH = 0
