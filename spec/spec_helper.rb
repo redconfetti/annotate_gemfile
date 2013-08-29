@@ -5,6 +5,8 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+require 'annotate_gemfile'
+
 Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
