@@ -2,6 +2,10 @@
 
 Adds Github name, description, URL above each gem declaration in your Gemfile.
 
+## Under Development
+
+This tool is still currently under development.
+
 ## Installation
 
 Add this line to your application's Gemfile:
