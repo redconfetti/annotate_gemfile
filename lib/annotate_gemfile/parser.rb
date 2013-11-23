@@ -17,5 +17,9 @@ module AnnotateGemfile
       @gemfile_source = IO.read(filepath)
     end
 
+    def remove_commented_lines
+      @gemfile_source.gsub!(/^\s*#.*\n+/,'')
+    end
+
   end # Parser
 end # AnnotateGemfile

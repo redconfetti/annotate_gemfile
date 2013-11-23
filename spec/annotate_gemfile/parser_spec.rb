@@ -15,4 +15,18 @@ describe AnnotateGemfile::Parser do
       expect(subject.class.datetime_string).to eq "11-23-13-18_50_00"
     end
   end
+
+  describe "#remove_commented_lines" do
+    it "removes commented lines from loaded gemfile_source" do
+      subject.instance_eval { @gemfile_source = "line 1\nline 2\n#line 3\nline 4\n" }
+      subject.remove_commented_lines
+      expect(subject.gemfile_source).to eq "line 1\nline 2\nline 4\n"
+    end
+
+    it "removes commented lines beginning with spaces or tabs from loaded gemfile_source" do
+      subject.instance_eval { @gemfile_source = "#line 1\nline 2\n  #line 3\n   # line 4\nline 5\nline 6" }
+      subject.remove_commented_lines
+      expect(subject.gemfile_source).to eq "line 2\nline 5\nline 6"
+    end
+  end
 end
