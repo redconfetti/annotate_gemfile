@@ -26,7 +26,6 @@ namespace :annotate do
     gemfile_path = args[:gempath]
     gemfile_path ||= File.dirname(__FILE__) + '/Gemfile'    
 
-    raise RuntimeError, "Gemfile not found at #{gemfile_path}" unless File.exists?(gemfile_path)
     puts "AnnotateGemfile Version: #{AnnotateGemfile::Version::STRING}"
     puts "Gemfile Path: #{gemfile_path.inspect}"
 
@@ -39,7 +38,5 @@ namespace :annotate do
     gemfile_meta = parser.build_meta_array
 
     puts "Gemfile Meta\n--------\n#{gemfile_meta.inspect}\n--------"
-    
-
   end
 end
