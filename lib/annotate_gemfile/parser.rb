@@ -3,8 +3,6 @@
 module AnnotateGemfile
   class Parser
 
-    attr_reader :gemfile_source
-
     def self.datetime_string
       Time.now.strftime("%m-%d-%y-%H_%M_%S")
     end
@@ -14,11 +12,12 @@ module AnnotateGemfile
     end
 
     def load_gemfile(filepath)
-      @gemfile_source = IO.read(filepath)
+      raise IOError, "Gemfile not found at #{filepath}" unless File.exist?(filepath)
+      @gemfile_contents = IO.read(filepath)
     end
 
     def remove_commented_lines
-      @gemfile_source.gsub!(/^\s*#.*\n+/,'')
+      @gemfile_contents.gsub!(/^\s*#.*\n+/,'')
     end
 
   end # Parser

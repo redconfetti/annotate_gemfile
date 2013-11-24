@@ -1,0 +1,32 @@
+source 'https://rubygems.org'
+ruby '2.0.0'
+
+# Classy web-development dressed in a DSL
+# https://github.com/sinatra/sinatra
+gem 'sinatra'
+
+# A fast and very simple Ruby web server
+# http://code.macournoyer.com/thin/
+gem 'thin'
+
+# Behaviour Driven Development for Ruby
+# https://github.com/rspec/rspec
+gem 'rspec', :require => 'spec'
+
+# JSON implementation for Ruby
+# http://flori.github.io/json/
+gem 'json'
+
+group :development do
+  gem "lunchy"
+end
+
+group :doc do
+  # YARD is a Ruby Documentation tool
+  # https://github.com/lsegal/yard
+  gem "yard", "~> 0.8.7"
+end
+
+gem "figaro"
+gem "capybara", group: [:development, :test]
+
