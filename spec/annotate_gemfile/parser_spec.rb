@@ -17,7 +17,31 @@ describe AnnotateGemfile::Parser do
     expect(contents).to eq "source 'https://rubygems.org'"
   end
 
-  describe "#datetime_string" do
+  describe ".is_gem_definition?" do
+    it "returns true if line begins with gem call" do
+      expect(AnnotateGemfile::Parser.is_gem_definition?("    gem \"my-fancy_gem23\"")).to be_true
+      expect(AnnotateGemfile::Parser.is_gem_definition?("    gem \"abebooks4r\"")).to be_true
+    end
+
+    it "returns false if line does not begin with gem call " do
+      expect(AnnotateGemfile::Parser.is_gem_definition?(" gem \"invalid\^\!gem\*name\"")).to be_false
+      expect(AnnotateGemfile::Parser.is_gem_definition?(" notgem \"sinatra\"")).to be_false
+      expect(AnnotateGemfile::Parser.is_gem_definition?(" ilike \"sinatra\"")).to be_false 
+    end
+  end
+
+  describe ".extract_gemname" do
+    it "raises exception if argument does not contain gem definition" do
+      expect { AnnotateGemfile::Parser.extract_gemname('lala') }.to raise_error(ArgumentError, "Argument string does not contain gem definition")
+    end
+
+    it "returns gem name from gem definition line string" do
+      expect(AnnotateGemfile::Parser.extract_gemname('     gem "sinatra"')).to eq "sinatra"
+      expect(AnnotateGemfile::Parser.extract_gemname(' gem "some-gem_name"')).to eq "some-gem_name"
+    end
+  end
+
+  describe ".datetime_string" do
     it "returns UTC date/time string formatted for use in filename" do
       fake_current_time = Time.at(1385232600).utc
       Time.should_receive(:now).and_return(fake_current_time)
@@ -49,9 +73,40 @@ describe AnnotateGemfile::Parser do
       subject.remove_commented_lines
       subject.load_gemfile_array
       gemfile_array = subject.instance_eval { @gemfile_array }
-      puts gemfile_array.inspect
       expect(gemfile_array[0]).to eq "source 'https://rubygems.org'\n"
       expect(gemfile_array[1]).to eq "ruby '2.0.0'\n"
     end
   end
+  
+  describe "#load_dependencies" do
+    it "loads gem dependency array" do
+      subject.load_dependencies
+      dependencies = subject.instance_eval { @gem_dependencies }
+      expect(dependencies).to be_an_instance_of Array
+      dependencies.each do |dependency|
+        expect(dependency).to be_an_instance_of Bundler::Dependency
+      end
+      # puts dependencies.inspect
+    end
+  end
+  
+  describe "#build_meta_array" do
+    it "raises exception if gemfile array is empty" do
+      subject.instance_eval { @gemfile_array = [] }
+      expect { subject.build_meta_array }.to raise_error(RuntimeError, "Gemfile lines not loaded")
+    end
+
+    it "creates gemfile metadata array" do
+      subject.remove_commented_lines
+      subject.load_gemfile_array
+      subject.load_dependencies
+      subject.build_meta_array
+      gemfile_meta = subject.instance_eval { @gemfile_meta }
+      expect(gemfile_meta).to be_an_instance_of Array
+      expect(gemfile_meta[0]).to be_an_instance_of Hash
+      expect(gemfile_meta[0][:line]).to eq 2
+      expect(gemfile_meta[0][:name]).to eq "sinatra"
+    end
+  end
+
 end
