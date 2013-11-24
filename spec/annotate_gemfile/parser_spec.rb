@@ -38,4 +38,20 @@ describe AnnotateGemfile::Parser do
       expect(subject.instance_eval { @gemfile_contents }).to eq "line 2\nline 5\nline 6"
     end
   end
+
+  describe "#load_gemfile_array" do
+    it "raises exception if gemfile string not present" do
+      subject.instance_eval { @gemfile_contents = nil }
+      expect { subject.load_gemfile_array }.to raise_error(RuntimeError, "Gemfile contents not present")
+    end
+
+    it "converts gemfile contents into gemfile array" do
+      subject.remove_commented_lines
+      subject.load_gemfile_array
+      gemfile_array = subject.instance_eval { @gemfile_array }
+      puts gemfile_array.inspect
+      expect(gemfile_array[0]).to eq "source 'https://rubygems.org'\n"
+      expect(gemfile_array[1]).to eq "ruby '2.0.0'\n"
+    end
+  end
 end

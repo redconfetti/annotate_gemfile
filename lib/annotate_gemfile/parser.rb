@@ -20,5 +20,10 @@ module AnnotateGemfile
       @gemfile_contents.gsub!(/^\s*#.*\n+/,'')
     end
 
+    def load_gemfile_array
+      raise RuntimeError, "Gemfile contents not present" if @gemfile_contents.nil?
+      @gemfile_array = @gemfile_contents.lines.to_a
+    end
+
   end # Parser
 end # AnnotateGemfile
