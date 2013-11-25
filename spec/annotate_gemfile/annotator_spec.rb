@@ -12,6 +12,27 @@ describe AnnotateGemfile::Annotator do
     end
   end
 
+  describe ".github_repo" do
+    it "returns repository information for gem" do
+      # https://github.com/rails/rails
+      result = subject.class.github_repo('rails', 'rails')
+      expect(result).to be_an_instance_of Hash
+      expect(result[:id]).to eq 8514
+      expect(result[:name]).to eq "rails"
+      expect(result[:description]).to eq "Ruby on Rails"
+      expect(result[:created_at]).to eq "2008-04-11T02:19:47Z"
+      expect(result[:updated_at]).to eq "2013-11-25T06:35:03Z"
+      expect(result[:pushed_at]).to eq "2013-11-24T23:43:06Z"
+      expect(result[:full_name]).to eq "rails/rails"
+      expect(result[:html_url]).to eq "https://github.com/rails/rails"
+      expect(result[:homepage]).to eq "http://rubyonrails.org"
+      expect(result[:ssh_url]).to eq "git@github.com:rails/rails.git"
+      expect(result[:clone_url]).to eq "https://github.com/rails/rails.git"
+      expect(result[:git_url]).to eq "git://github.com/rails/rails.git"
+      expect(result[:svn_url]).to eq "https://github.com/rails/rails"
+    end
+  end
+
   describe "#backup_gemfile" do
     let(:backup_file_path) { gemfile_path + "-backup-11-23-13-18_50_00" }
     before do
