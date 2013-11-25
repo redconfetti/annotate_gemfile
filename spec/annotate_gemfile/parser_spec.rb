@@ -1,18 +1,85 @@
 require 'spec_helper'
 
 describe AnnotateGemfile::Parser do
-  subject         { AnnotateGemfile::Parser.new(File.dirname(__FILE__) + "/../dummy/Gemfile") }
 
-  its(:gemfile_meta) { should == [] }
+  subject               { AnnotateGemfile::Parser.new(gemfile_path) }
+  let(:gemfile_path)    { File.dirname(__FILE__) + "/../dummy/Gemfile" }
+  its(:gemfile_meta)    { should == [] }
+  its(:gemfile_array)   { should == [] }
 
-  it "raises exception if gemfile specified does not exist" do
-    expect { AnnotateGemfile::Parser.new('/bogus/file/path') }.to raise_error(IOError, "Gemfile not found at /bogus/file/path")
+  describe ".parse" do
+    it "returns processed parser" do
+      parser = AnnotateGemfile::Parser.parse(gemfile_path)
+      expect(parser).to be_an_instance_of AnnotateGemfile::Parser
+      gemfile_array = parser.gemfile_array
+      gemfile_meta = parser.gemfile_meta
+      expect(gemfile_array).to be_an_instance_of Array
+      # gemfile_array.each_with_index {|line,index| puts "#{index}: #{line}" }
+      # gemfile_meta.each_with_index {|line,index| puts "#{index}: #{line}" }
+      expect(gemfile_array[0]).to eq "source 'https://rubygems.org'\n"
+      expect(gemfile_array[1]).to eq "ruby '2.0.0'\n"
+      expect(gemfile_array[2]).to eq "gem 'sinatra'\n"
+      expect(gemfile_array[3]).to eq "gem 'thin'\n"
+      expect(gemfile_array[4]).to eq "gem 'rspec', :require => 'spec'\n"
+      expect(gemfile_array[5]).to eq "gem 'json'\n"
+      expect(gemfile_array[6]).to eq "\n"
+      expect(gemfile_array[7]).to eq "gem 'nokogiri', :git => 'git://github.com/tenderlove/nokogiri.git', :tag => 'v1.6.0'\n"
+      expect(gemfile_array[8]).to eq "\n"
+      expect(gemfile_array[9]).to eq "group :development do\n"
+      expect(gemfile_array[10]).to eq "  gem \"lunchy\", :git => 'git://github.com:mperham/lunchy.git', :branch => 'master'\n"
+      expect(gemfile_array[11]).to eq "end\n"
+      expect(gemfile_array[12]).to eq "\n"
+      expect(gemfile_array[13]).to eq "group :doc do\n"
+      expect(gemfile_array[14]).to eq "  gem \"yard\", \"~> 0.8.7\"\n"
+      expect(gemfile_array[15]).to eq "end\n"
+      expect(gemfile_array[16]).to eq "\n"
+      expect(gemfile_array[17]).to eq "gem \"figaro\"\n"
+      expect(gemfile_array[18]).to eq "gem \"capybara\", group: [:development, :test]\n"
+      expect(gemfile_array[19]).to eq "\n"
+      expect(gemfile_array[20]).to eq "gem \"annotate_gemfile\", :path => '../../annotate_gemfile'\n"
+      expect(gemfile_meta).to be_an_instance_of Array
+      expect(gemfile_meta[0][:line]).to eq 2
+      expect(gemfile_meta[0][:name]).to eq "sinatra"
+      expect(gemfile_meta[1][:line]).to eq 3
+      expect(gemfile_meta[1][:name]).to eq "thin"
+      expect(gemfile_meta[2][:line]).to eq 4
+      expect(gemfile_meta[2][:name]).to eq "rspec"
+      expect(gemfile_meta[3][:line]).to eq 5
+      expect(gemfile_meta[3][:name]).to eq "json"
+      expect(gemfile_meta[4][:line]).to eq 7
+      expect(gemfile_meta[4][:name]).to eq "nokogiri"
+      expect(gemfile_meta[4][:source]).to be_an_instance_of Bundler::Source::Git
+      expect(gemfile_meta[4][:source].uri).to eq "git://github.com/tenderlove/nokogiri.git"
+      expect(gemfile_meta[4][:source].ref).to eq "v1.6.0"
+      expect(gemfile_meta[5][:line]).to eq 10
+      expect(gemfile_meta[5][:name]).to eq "lunchy"
+      expect(gemfile_meta[5][:source]).to be_an_instance_of Bundler::Source::Git
+      expect(gemfile_meta[5][:source].uri).to eq "git://github.com:mperham/lunchy.git"
+      expect(gemfile_meta[5][:source].branch).to eq "master"
+      expect(gemfile_meta[6][:line]).to eq 14
+      expect(gemfile_meta[6][:name]).to eq "yard"
+      expect(gemfile_meta[7][:line]).to eq 17
+      expect(gemfile_meta[7][:name]).to eq "figaro"
+      expect(gemfile_meta[8][:line]).to eq 18
+      expect(gemfile_meta[8][:name]).to eq "capybara"
+      expect(gemfile_meta[9][:line]).to eq 20
+      expect(gemfile_meta[9][:name]).to eq "annotate_gemfile"
+      expect(gemfile_meta[9][:source]).to be_an_instance_of Bundler::Source::Path
+      expect(gemfile_meta[9][:source].path).to be_an_instance_of Pathname
+      expect(gemfile_meta[9][:source].path.to_s).to eq "../../annotate_gemfile"
+    end
   end
 
-  it "loads gemfile contents" do
-    parser = AnnotateGemfile::Parser.new(File.dirname(__FILE__) + "/../dummy/Gemfile_empty")
-    contents = parser.instance_eval{ @gemfile_contents }
-    expect(contents).to eq "source 'https://rubygems.org'"
+  describe ".new" do
+    it "raises exception if gemfile specified does not exist" do
+      expect { AnnotateGemfile::Parser.new('/bogus/file/path') }.to raise_error(IOError, "Gemfile not found at /bogus/file/path")
+    end
+
+    it "loads gemfile contents" do
+      parser = AnnotateGemfile::Parser.new(File.dirname(__FILE__) + "/../dummy/Gemfile_empty")
+      contents = parser.instance_eval{ @gemfile_contents }
+      expect(contents).to eq "source 'https://rubygems.org'"
+    end
   end
 
   describe ".is_gem_definition?" do
@@ -125,8 +192,20 @@ describe AnnotateGemfile::Parser do
       expect(gemfile_meta[4][:name]).to eq "nokogiri"
       expect(gemfile_meta[4][:type]).to eq :runtime
       expect(gemfile_meta[4][:source]).to be_an_instance_of Bundler::Source::Git
+      expect(gemfile_meta[4][:source]).to be_an_instance_of Bundler::Source::Git
+      expect(gemfile_meta[4][:source].uri).to eq "git://github.com/tenderlove/nokogiri.git"
+      expect(gemfile_meta[4][:source].ref).to eq "v1.6.0"
       expect(gemfile_meta[4][:platforms]).to eq []
       expect(gemfile_meta[4][:requirement]).to be_an_instance_of Gem::Requirement
+      expect(gemfile_meta[5][:line]).to eq 10
+      expect(gemfile_meta[5][:name]).to eq "lunchy"
+      expect(gemfile_meta[5][:source]).to be_an_instance_of Bundler::Source::Git
+      expect(gemfile_meta[5][:source].uri).to eq "git://github.com:mperham/lunchy.git"
+      expect(gemfile_meta[5][:source].branch).to eq "master"
+      expect(gemfile_meta[9][:name]).to eq "annotate_gemfile"
+      expect(gemfile_meta[9][:source]).to be_an_instance_of Bundler::Source::Path
+      expect(gemfile_meta[9][:source].path).to be_an_instance_of Pathname
+      expect(gemfile_meta[9][:source].path.to_s).to eq "../../annotate_gemfile"
     end
   end
 

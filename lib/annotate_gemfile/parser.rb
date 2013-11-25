@@ -3,10 +3,19 @@
 module AnnotateGemfile
   class Parser
 
-    attr_reader :gemfile_meta
+    attr_reader :gemfile_meta, :gemfile_array
 
     GEM_DEFINITION_REGEX = /^\s*gem\s*["'][a-zA-Z0-9_-]*["']/
     GEM_NAME_EXTRACT_REGEX = /^\s*gem\s*["'](.*?)["']/
+
+    def self.parse(gemfile_path)
+      parser = self.new(gemfile_path)
+      parser.remove_commented_lines
+      parser.load_gemfile_array
+      parser.load_dependencies
+      parser.build_meta_array
+      parser
+    end
 
     def self.datetime_string
       Time.now.strftime("%m-%d-%y-%H_%M_%S")
