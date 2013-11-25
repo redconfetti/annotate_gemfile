@@ -56,7 +56,14 @@ module AnnotateGemfile
       @gemfile_array.each_with_index do |line,index|
         if self.class.is_gem_definition?(line)
           gem_name = self.class.extract_gemname(line)
-          @gemfile_meta << { :line => index, :name => gem_name }
+          dependency = find_dependency(gem_name)
+          raise RuntimeError, "Dependency not found" if dependency == nil
+          gem_hash = { :line => index, :name => gem_name }
+          gem_hash[:type] = dependency.type
+          gem_hash[:requirement] = dependency.requirement
+          gem_hash[:source] = dependency.source
+          gem_hash[:platforms] = dependency.platforms
+          @gemfile_meta << gem_hash
         end
       end
       @gemfile_meta

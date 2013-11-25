@@ -122,9 +122,13 @@ describe AnnotateGemfile::Parser do
       subject.build_meta_array
       gemfile_meta = subject.instance_eval { @gemfile_meta }
       expect(gemfile_meta).to be_an_instance_of Array
-      expect(gemfile_meta[0]).to be_an_instance_of Hash
-      expect(gemfile_meta[0][:line]).to eq 2
-      expect(gemfile_meta[0][:name]).to eq "sinatra"
+      expect(gemfile_meta[4]).to be_an_instance_of Hash
+      expect(gemfile_meta[4][:line]).to eq 7
+      expect(gemfile_meta[4][:name]).to eq "nokogiri"
+      expect(gemfile_meta[4][:type]).to eq :runtime
+      expect(gemfile_meta[4][:source]).to be_an_instance_of Bundler::Source::Git
+      expect(gemfile_meta[4][:platforms]).to eq []
+      expect(gemfile_meta[4][:requirement]).to be_an_instance_of Gem::Requirement
     end
   end
 
