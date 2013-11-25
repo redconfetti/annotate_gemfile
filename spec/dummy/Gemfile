@@ -17,6 +17,8 @@ gem 'rspec', :require => 'spec'
 # http://flori.github.io/json/
 gem 'json'
 
+gem 'nokogiri', :git => 'git://github.com/tenderlove/nokogiri.git'
+
 group :development do
   gem "lunchy"
 end
