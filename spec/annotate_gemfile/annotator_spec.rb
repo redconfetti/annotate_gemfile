@@ -12,6 +12,24 @@ describe AnnotateGemfile::Annotator do
     end
   end
 
+  describe ".gem_info" do
+    it "returns gem information hash" do
+      VCR.configure {|c| c.hook_into :webmock }
+      VCR.use_cassette('rubygems.org/api/v1/gems/rails') do
+        # http://rubygems.org/gems/rails/versions/4.0.1
+        result = subject.class.gem_info('rails', '4.0.1')
+        expect(result).to be_an_instance_of Hash
+        expect(result[:name]).to eq "rails"
+        expect(result[:version]).to eq "4.0.1"
+        expect(result[:platform]).to eq "ruby"
+        expect(result[:info]).to eq "Ruby on Rails is a full-stack web framework optimized for programmer happiness and sustainable productivity. It encourages beautiful code by favoring convention over configuration."
+        expect(result[:homepage_uri]).to eq "http://www.rubyonrails.org"
+        expect(result[:source_code_uri]).to eq "http://github.com/rails/rails"
+        expect(result[:documentation_uri]).to eq "http://api.rubyonrails.org"
+      end
+    end
+  end
+
   describe ".github_repo" do
     it "returns repository information for gem" do
       VCR.use_cassette('github.com/api/get/rails') do

@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/rails.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Nov 2013 16:16:49 GMT
+      Content-Type:
+      - text/yaml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Disposition:
+      - attachment
+      Content-Transfer-Encoding:
+      - binary
+      Cache-Control:
+      - private
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"9a3aa5b6752b791ef813d8e27d740cd8"'
+      Set-Cookie:
+      - remember_token=; path=/; expires=Tue, 25-Nov-2014 16:16:49 GMT; secure
+      X-Request-Id:
+      - 5dfc02540bebdcb6e0ab0d835f150efb
+      X-Runtime:
+      - '0.036552'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! "---\nname: rails\ndownloads: 29734063\nversion: 4.0.1\nversion_downloads:
+        152478\nplatform: ruby\nauthors: David Heinemeier Hansson\ninfo: Ruby on Rails
+        is a full-stack web framework optimized for programmer happiness\n  and sustainable
+        productivity. It encourages beautiful code by favoring convention\n  over
+        configuration.\nlicenses:\n- MIT\nproject_uri: http://rubygems.org/gems/rails\ngem_uri:
+        http://rubygems.org/gems/rails-4.0.1.gem\nhomepage_uri: http://www.rubyonrails.org\nwiki_uri:
+        http://wiki.rubyonrails.org\ndocumentation_uri: http://api.rubyonrails.org\nmailing_list_uri:
+        http://groups.google.com/group/rubyonrails-talk\nsource_code_uri: http://github.com/rails/rails\nbug_tracker_uri:
+        http://github.com/rails/rails/issues\ndependencies:\n  development: []\n  runtime:\n
+        \ - name: actionmailer\n    requirements: = 4.0.1\n  - name: actionpack\n
+        \   requirements: = 4.0.1\n  - name: activerecord\n    requirements: = 4.0.1\n
+        \ - name: activesupport\n    requirements: = 4.0.1\n  - name: bundler\n    requirements:
+        < 2.0, >= 1.3.0\n  - name: railties\n    requirements: = 4.0.1\n  - name:
+        sprockets-rails\n    requirements: ~> 2.0.0\n"
+    http_version: 
+  recorded_at: Mon, 25 Nov 2013 16:16:50 GMT
+recorded_with: VCR 2.8.0

@@ -6,6 +6,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'annotate_gemfile'
+require 'webmock/rspec'
 require 'vcr'
 
 Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each {|f| require f}
@@ -25,4 +26,5 @@ end
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   c.hook_into :faraday
+  c.ignore_localhost = true
 end

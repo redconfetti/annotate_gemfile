@@ -12,6 +12,20 @@ module AnnotateGemfile
 
   class Annotator
 
+    def self.gem_info(name, version)
+      # http://guides.rubygems.org/rubygems-org-api/
+      gem_hash = Gems.info name
+      {
+        :name => gem_hash["name"],
+        :version => gem_hash["version"],
+        :platform => gem_hash["platform"],
+        :info => gem_hash["info"],
+        :homepage_uri => gem_hash["homepage_uri"],
+        :source_code_uri => gem_hash["source_code_uri"],
+        :documentation_uri => gem_hash["documentation_uri"],
+      }
+    end
+
     def self.github_repo(user_name, repo_name)
       github = Github.new
       response = github.repos.get user_name, repo_name
