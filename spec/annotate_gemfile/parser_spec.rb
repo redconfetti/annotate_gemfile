@@ -3,7 +3,7 @@ require 'spec_helper'
 describe AnnotateGemfile::Parser do
   subject         { AnnotateGemfile::Parser.new(File.dirname(__FILE__) + "/../dummy/Gemfile") }
 
-  # its(:class)   { should have_constant(:MAJOR, Fixnum) }
+  its(:gemfile_meta) { should == [] }
   
   # before(:each)   { IO.should_receive(:read).and_return("File Contents") }
 

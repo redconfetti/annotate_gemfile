@@ -3,6 +3,8 @@
 module AnnotateGemfile
   class Parser
 
+    attr_reader :gemfile_meta
+
     GEM_DEFINITION_REGEX = /^\s*gem\s*["'][a-zA-Z0-9_-]*["']/
     GEM_NAME_EXTRACT_REGEX = /^\s*gem\s*["'](.*?)["']/
 
@@ -22,7 +24,7 @@ module AnnotateGemfile
     def initialize(gemfile_path)
       @gemfile_path     = gemfile_path
       @gemfile_array    = []
-      @gemfile_meta = []
+      @gemfile_meta     = []
       @gem_dependencies = []
       load_gemfile(@gemfile_path)
     end
