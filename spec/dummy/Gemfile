@@ -17,10 +17,10 @@ gem 'rspec', :require => 'spec'
 # http://flori.github.io/json/
 gem 'json'
 
-gem 'nokogiri', :git => 'git://github.com/tenderlove/nokogiri.git'
+gem 'nokogiri', :git => 'git://github.com/tenderlove/nokogiri.git', :tag => 'v1.6.0'
 
 group :development do
-  gem "lunchy"
+  gem "lunchy", :git => 'git://github.com:mperham/lunchy.git', :branch => 'master'
 end
 
 group :doc do
@@ -32,3 +32,4 @@ end
 gem "figaro"
 gem "capybara", group: [:development, :test]
 
+gem "annotate_gemfile", :path => '../../annotate_gemfile'
