@@ -30,12 +30,9 @@ namespace :annotate do
     puts "Gemfile Path: #{gemfile_path.inspect}"
 
     annotater = AnnotateGemfile::Annotator.new(gemfile_path)
-    parser = AnnotateGemfile::Parser.new(gemfile_path)
-
-    parser.remove_commented_lines
-    parser.load_gemfile_array
-    parser.load_dependencies
-    gemfile_meta = parser.build_meta_array
+    parser = AnnotateGemfile::Parser.parse(gemfile_path)
+    gemfile_array = parser.gemfile_array
+    gemfile_meta = parser.gemfile_meta
 
     puts "Gemfile Meta\n--------\n#{gemfile_meta.inspect}\n--------"
   end
