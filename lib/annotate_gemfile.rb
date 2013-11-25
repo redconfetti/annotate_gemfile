@@ -8,14 +8,18 @@ module AnnotateGemfile
   autoload :Parser,     'annotate_gemfile/parser'
 
   class Annotator
-    attr_accessor :some_property
+
+    def self.datetime_string
+      Time.now.strftime("%m-%d-%y-%H_%M_%S")
+    end
+
     def initialize(path)
       @gemfile_path = path
     end
 
-    def bundler_details
-      Gem::Dependency.new("rails", Gem::Requirement.new(["= 4.0.0"]), :runtime).to_s
+    def backup_gemfile
     end
+
   end
 
 end

@@ -17,10 +17,6 @@ module AnnotateGemfile
       parser
     end
 
-    def self.datetime_string
-      Time.now.strftime("%m-%d-%y-%H_%M_%S")
-    end
-
     def self.is_gem_definition?(line)
       line.match(GEM_DEFINITION_REGEX) ? true : false
     end
