@@ -18,18 +18,19 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.3"
-
-  # https://github.com/jimweirich/rake
-  spec.add_development_dependency "rake"  
-
   # https://github.com/rspec/rspec
   spec.add_development_dependency "rspec", "~> 2.14.1"
-  
+
+  # https://github.com/bundler/bundler
+  spec.add_runtime_dependency "bundler", "~> 1.3"
+
+  # https://github.com/jimweirich/rake
+  spec.add_runtime_dependency "rake"
+
   # https://github.com/rubygems/gems
-  # spec.add_runtime_dependency 'gems', '~> 0.8.3'
+  spec.add_runtime_dependency 'gems', '~> 0.8.3'
 
   # https://github.com/peter-murach/github
-  # spec.add_runtime_dependency 'github_api', '~> 0.10.2'
+  spec.add_runtime_dependency 'github_api', '~> 0.10.2'
 
 end
