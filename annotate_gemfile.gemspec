@@ -21,6 +21,8 @@ Gem::Specification.new do |spec|
   # https://github.com/rspec/rspec
   spec.add_development_dependency "rspec", "~> 2.14.1"
 
+  spec.add_development_dependency "vcr", "~> 2.8.0"
+
   # https://github.com/bundler/bundler
   spec.add_runtime_dependency "bundler", "~> 1.3"
 
