@@ -4,8 +4,6 @@ describe AnnotateGemfile::Parser do
   subject         { AnnotateGemfile::Parser.new(File.dirname(__FILE__) + "/../dummy/Gemfile") }
 
   its(:gemfile_meta) { should == [] }
-  
-  # before(:each)   { IO.should_receive(:read).and_return("File Contents") }
 
   it "raises exception if gemfile specified does not exist" do
     expect { AnnotateGemfile::Parser.new('/bogus/file/path') }.to raise_error(IOError, "Gemfile not found at /bogus/file/path")
