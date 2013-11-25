@@ -89,7 +89,26 @@ describe AnnotateGemfile::Parser do
       # puts dependencies.inspect
     end
   end
-  
+
+  describe "#find_dependency" do
+    before { subject.load_dependencies }
+    it "raises exception of gem dependencies are not present" do
+      subject.instance_eval { @gem_dependencies = [] }
+      expect { subject.find_dependency('sinatra') }.to raise_error(RuntimeError, "Gem dependencies not present")
+    end
+
+    it "returns nil when gem is not present" do
+      result = subject.find_dependency('rails')
+      expect(result).to eq nil
+    end
+
+    it "returns dependency object when gem is present" do
+      result = subject.find_dependency('yard')
+      expect(result).to be_an_instance_of Bundler::Dependency
+      expect(result.name).to eq 'yard'
+    end
+  end
+
   describe "#build_meta_array" do
     it "raises exception if gemfile array is empty" do
       subject.instance_eval { @gemfile_array = [] }

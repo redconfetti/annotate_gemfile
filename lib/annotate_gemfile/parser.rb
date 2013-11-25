@@ -46,6 +46,11 @@ module AnnotateGemfile
       @gem_dependencies = builder.eval_gemfile(@gemfile_path)
     end
 
+    def find_dependency(gem_name)
+      raise RuntimeError, "Gem dependencies not present" if @gem_dependencies.empty?
+      @gem_dependencies.select {|d| d.name == gem_name}[0]
+    end
+
     def build_meta_array
       raise RuntimeError, "Gemfile lines not loaded" if @gemfile_array.empty?
       @gemfile_array.each_with_index do |line,index|
