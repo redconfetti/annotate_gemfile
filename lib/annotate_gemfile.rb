@@ -12,7 +12,7 @@ module AnnotateGemfile
 
   class Annotator
 
-    def self.gem_info(name, version)
+    def self.gem_info(name)
       # http://guides.rubygems.org/rubygems-org-api/
       gem_hash = Gems.info name
       {
@@ -59,6 +59,15 @@ module AnnotateGemfile
       @gemfile_path_backup = @gemfile_path + "-backup-#{self.class.datetime_string}"
       FileUtils.copy_file(@gemfile_path, @gemfile_path_backup)
       @gemfile_path_backup
+    end
+
+    def build_meta_gemfile
+      parser = AnnotateGemfile::Parser.parse(@gemfile_path)
+      @meta_gemfile = parser.gemfile_meta
+      @meta_gemfile.collect! do |line|
+        line.merge( {:rubygem_info => self.class.gem_info(line[:name])} )
+      end
+      @gemfile_array = parser.gemfile_array
     end
 
   end

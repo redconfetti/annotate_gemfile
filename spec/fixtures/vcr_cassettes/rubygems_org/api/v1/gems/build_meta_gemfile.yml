@@ -1,0 +1,726 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/sinatra.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Nov 2013 07:06:42 GMT
+      Content-Type:
+      - text/yaml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Disposition:
+      - attachment
+      Content-Transfer-Encoding:
+      - binary
+      Cache-Control:
+      - private
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"69ec3359c9951e34b792d51647b34f1c"'
+      Set-Cookie:
+      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:42 GMT; secure
+      X-Request-Id:
+      - 3c85937ac98a0c0dd96c96a309ad8d30
+      X-Runtime:
+      - '0.030841'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! "---\nname: sinatra\ndownloads: 10488277\nversion: 1.4.4\nversion_downloads:
+        208491\nplatform: ruby\nauthors: Blake Mizerany, Ryan Tomayko, Simon Rozet,
+        Konstantin Haase\ninfo: Sinatra is a DSL for quickly creating web applications
+        in Ruby with minimal\n  effort.\nlicenses: []\nproject_uri: http://rubygems.org/gems/sinatra\ngem_uri:
+        http://rubygems.org/gems/sinatra-1.4.4.gem\nhomepage_uri: http://www.sinatrarb.com/\nwiki_uri:
+        ''\ndocumentation_uri: http://www.sinatrarb.com\nmailing_list_uri: http://groups.google.com/group/sinatrarb/topics\nsource_code_uri:
+        http://github.com/sinatra/sinatra\nbug_tracker_uri: http://github.com/sinatra/sinatra/issues\ndependencies:\n
+        \ development: []\n  runtime:\n  - name: rack\n    requirements: ~> 1.4\n
+        \ - name: rack-protection\n    requirements: ~> 1.4\n  - name: tilt\n    requirements:
+        ! '>= 1.3.4, ~> 1.3'\n"
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 07:06:43 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/thin.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Nov 2013 07:06:42 GMT
+      Content-Type:
+      - text/yaml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Disposition:
+      - attachment
+      Content-Transfer-Encoding:
+      - binary
+      Cache-Control:
+      - private
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"024c94eb8c516d38857a1d880caeeaba"'
+      Set-Cookie:
+      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:42 GMT; secure
+      X-Request-Id:
+      - 5907dd11943c5b606ec3bf042135e595
+      X-Runtime:
+      - '0.035048'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! "---\nname: thin\ndownloads: 5889173\nversion: 1.6.1\nversion_downloads:
+        87391\nplatform: ruby\nauthors: Marc-Andre Cournoyer\ninfo: A thin and fast
+        web server\nlicenses:\n- Ruby\nproject_uri: http://rubygems.org/gems/thin\ngem_uri:
+        http://rubygems.org/gems/thin-1.6.1.gem\nhomepage_uri: http://code.macournoyer.com/thin/\nwiki_uri:
+        \ndocumentation_uri: \nmailing_list_uri: \nsource_code_uri: \nbug_tracker_uri:
+        \ndependencies:\n  development: []\n  runtime:\n  - name: daemons\n    requirements:
+        ! '>= 1.0.9'\n  - name: eventmachine\n    requirements: ! '>= 1.0.0'\n  -
+        name: rack\n    requirements: ! '>= 1.0.0'\n"
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 07:06:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/rspec.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Nov 2013 07:06:42 GMT
+      Content-Type:
+      - text/yaml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Disposition:
+      - attachment
+      Content-Transfer-Encoding:
+      - binary
+      Cache-Control:
+      - private
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"75cac1842c15bf7067e732e51d3fb71d"'
+      Set-Cookie:
+      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:42 GMT; secure
+      X-Request-Id:
+      - 1f683362f7f4bb1f56d32165938338d1
+      X-Runtime:
+      - '0.034093'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! "---\nname: rspec\ndownloads: 11833469\nversion: 2.14.1\nversion_downloads:
+        1211049\nplatform: ruby\nauthors: Steven Baker, David Chelimsky\ninfo: BDD
+        for Ruby\nlicenses:\n- MIT\nproject_uri: http://rubygems.org/gems/rspec\ngem_uri:
+        http://rubygems.org/gems/rspec-2.14.1.gem\nhomepage_uri: http://github.com/rspec\nwiki_uri:
+        ''\ndocumentation_uri: http://relishapp.com/rspec\nmailing_list_uri: http://rubyforge.org/mailman/listinfo/rspec-users\nsource_code_uri:
+        http://github.com/rspec/rspec\nbug_tracker_uri: ''\ndependencies:\n  development:
+        []\n  runtime:\n  - name: rspec-core\n    requirements: ~> 2.14.0\n  - name:
+        rspec-expectations\n    requirements: ~> 2.14.0\n  - name: rspec-mocks\n    requirements:
+        ~> 2.14.0\n"
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 07:06:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/json.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Nov 2013 07:06:43 GMT
+      Content-Type:
+      - text/yaml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Disposition:
+      - attachment
+      Content-Transfer-Encoding:
+      - binary
+      Cache-Control:
+      - private
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"8a50eb152b9bb50f60c8139bffd26d1c"'
+      Set-Cookie:
+      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:43 GMT; secure
+      X-Request-Id:
+      - 7bb95c8d2b4a67fed06b7ec9a4660a76
+      X-Runtime:
+      - '0.094311'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! "---\nname: json\ndownloads: 29249775\nversion: 1.8.1\nversion_downloads:
+        1090151\nplatform: ruby\nauthors: Florian Frank\ninfo: This is a JSON implementation
+        as a Ruby extension in C.\nlicenses:\n- Ruby\nproject_uri: http://rubygems.org/gems/json\ngem_uri:
+        http://rubygems.org/gems/json-1.8.1.gem\nhomepage_uri: http://json-jruby.rubyforge.org/\nwiki_uri:
+        ''\ndocumentation_uri: http://flori.github.com/json/doc/index.html\nmailing_list_uri:
+        ''\nsource_code_uri: http://flori.github.com/json/\nbug_tracker_uri: http://github.com/flori/json/issues\ndependencies:\n
+        \ development:\n  - name: permutation\n    requirements: ! '>= 0'\n  - name:
+        sdoc\n    requirements: ~> 0.3.16\n  runtime: []\n"
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 07:06:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/nokogiri.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbng=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        V2VkLCAyNyBOb3YgMjAxMyAwNzowNjo0MyBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC95YW1s
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "U3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "Q29udGVudC1EaXNwb3NpdGlvbg==":
+      - !binary |-
+        YXR0YWNobWVudA==
+      !binary "Q29udGVudC1UcmFuc2Zlci1FbmNvZGluZw==":
+      - !binary |-
+        YmluYXJ5
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZQ==
+      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "WC1VYS1Db21wYXRpYmxl":
+      - !binary |-
+        SUU9RWRnZSxjaHJvbWU9MQ==
+      - !binary |-
+        SUU9RWRnZSxjaHJvbWU9MQ==
+      !binary "RXRhZw==":
+      - !binary |-
+        IjY0YWIwZDA0ZmViYzljYmZhYzBjMjUwYmRmZDJjNmM5Ig==
+      !binary "U2V0LUNvb2tpZQ==":
+      - !binary |-
+        cmVtZW1iZXJfdG9rZW49OyBwYXRoPS87IGV4cGlyZXM9VGh1LCAyNy1Ob3Yt
+        MjAxNCAwNzowNjo0MyBHTVQ7IHNlY3VyZQ==
+      !binary "WC1SZXF1ZXN0LUlk":
+      - !binary |-
+        Y2Y3YzZkMWEzNDJmOTViMTliMGRjZDg2NDBhYjhlMTg=
+      !binary "WC1SdW50aW1l":
+      - !binary |-
+        MC4wNDAyNjE=
+      !binary "WC1SYWNrLUNhY2hl":
+      - !binary |-
+        bWlzcw==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        LS0tCm5hbWU6IG5va29naXJpCmRvd25sb2FkczogMTY4Nzk3MzcKdmVyc2lv
+        bjogMS42LjAKdmVyc2lvbl9kb3dubG9hZHM6IDE2OTM4OTYKcGxhdGZvcm06
+        IHJ1YnkKYXV0aG9yczogQWFyb24gUGF0dGVyc29uLCBNaWtlIERhbGVzc2lv
+        LCBZb2tvIEhhcmFkYSwgVGltIEVsbGlvdHQKaW5mbzogISAnTm9rb2dpcmkg
+        KOmLuCkgaXMgYW4gSFRNTCwgWE1MLCBTQVgsIGFuZCBSZWFkZXIgcGFyc2Vy
+        LiAgQW1vbmcgTm9rb2dpcmknJ3MKCiAgbWFueSBmZWF0dXJlcyBpcyB0aGUg
+        YWJpbGl0eSB0byBzZWFyY2ggZG9jdW1lbnRzIHZpYSBYUGF0aCBvciBDU1Mz
+        IHNlbGVjdG9ycy4KCgogIFhNTCBpcyBsaWtlIHZpb2xlbmNlIC0gaWYgaXQg
+        ZG9lc27igJl0IHNvbHZlIHlvdXIgcHJvYmxlbXMsIHlvdSBhcmUgbm90IHVz
+        aW5nCgogIGVub3VnaCBvZiBpdC4nCmxpY2Vuc2VzOiBbXQpwcm9qZWN0X3Vy
+        aTogaHR0cDovL3J1YnlnZW1zLm9yZy9nZW1zL25va29naXJpCmdlbV91cmk6
+        IGh0dHA6Ly9ydWJ5Z2Vtcy5vcmcvZ2Vtcy9ub2tvZ2lyaS0xLjYuMC5nZW0K
+        aG9tZXBhZ2VfdXJpOiBodHRwOi8vbm9rb2dpcmkub3JnCndpa2lfdXJpOiAn
+        Jwpkb2N1bWVudGF0aW9uX3VyaTogaHR0cDovL25va29naXJpLm9yZwptYWls
+        aW5nX2xpc3RfdXJpOiBodHRwOi8vZ3JvdXBzLmdvb2dsZS5jb20vZ3JvdXAv
+        bm9rb2dpcmktdGFsawpzb3VyY2VfY29kZV91cmk6IGh0dHBzOi8vZ2l0aHVi
+        LmNvbS9zcGFya2xlbW90aW9uL25va29naXJpCmJ1Z190cmFja2VyX3VyaTog
+        aHR0cHM6Ly9naXRodWIuY29tL3NwYXJrbGVtb3Rpb24vbm9rb2dpcmkvaXNz
+        dWVzCmRlcGVuZGVuY2llczoKICBkZXZlbG9wbWVudDoKICAtIG5hbWU6IGhv
+        ZQogICAgcmVxdWlyZW1lbnRzOiB+PiAyLjE2CiAgLSBuYW1lOiBob2UtYnVu
+        ZGxlcgogICAgcmVxdWlyZW1lbnRzOiAhICc+PSAxLjEnCiAgLSBuYW1lOiBo
+        b2UtZGVidWdnaW5nCiAgICByZXF1aXJlbWVudHM6ICEgJz49IDEuMC4zJwog
+        IC0gbmFtZTogaG9lLWdlbXNwZWMKICAgIHJlcXVpcmVtZW50czogISAnPj0g
+        MS4wJwogIC0gbmFtZTogaG9lLWdpdAogICAgcmVxdWlyZW1lbnRzOiAhICc+
+        PSAxLjQnCiAgLSBuYW1lOiBtaW5pdGVzdAogICAgcmVxdWlyZW1lbnRzOiB+
+        PiAyLjIuMgogIC0gbmFtZTogcmFjYwogICAgcmVxdWlyZW1lbnRzOiAhICc+
+        PSAxLjQuNicKICAtIG5hbWU6IHJha2UKICAgIHJlcXVpcmVtZW50czogISAn
+        Pj0gMC45JwogIC0gbmFtZTogcmFrZS1jb21waWxlcgogICAgcmVxdWlyZW1l
+        bnRzOiB+PiAwLjguMAogIC0gbmFtZTogcmRvYwogICAgcmVxdWlyZW1lbnRz
+        OiB+PiAzLjEwCiAgLSBuYW1lOiByZXhpY2FsCiAgICByZXF1aXJlbWVudHM6
+        ICEgJz49IDEuMC41JwogIHJ1bnRpbWU6CiAgLSBuYW1lOiBtaW5pX3BvcnRp
+        bGUKICAgIHJlcXVpcmVtZW50czogfj4gMC41LjAK
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 07:06:45 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/lunchy.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Nov 2013 07:06:43 GMT
+      Content-Type:
+      - text/yaml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Disposition:
+      - attachment
+      Content-Transfer-Encoding:
+      - binary
+      Cache-Control:
+      - private
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"c9ae38a7f16ae7953ec4265ef7ed55e0"'
+      Set-Cookie:
+      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:43 GMT; secure
+      X-Request-Id:
+      - d8401697c7493f193a882be5761fe3e4
+      X-Runtime:
+      - '0.029718'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! "---\nname: lunchy\ndownloads: 39762\nversion: 0.7.0\nversion_downloads:
+        9238\nplatform: ruby\nauthors: Mike Perham\ninfo: Friendly wrapper around
+        launchctl\nlicenses: []\nproject_uri: http://rubygems.org/gems/lunchy\ngem_uri:
+        http://rubygems.org/gems/lunchy-0.7.0.gem\nhomepage_uri: http://github.com/mperham/lunchy\nwiki_uri:
+        \ndocumentation_uri: \nmailing_list_uri: \nsource_code_uri: \nbug_tracker_uri:
+        \ndependencies:\n  development: []\n  runtime: []\n"
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 07:06:45 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/yard.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Nov 2013 07:06:44 GMT
+      Content-Type:
+      - text/yaml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Disposition:
+      - attachment
+      Content-Transfer-Encoding:
+      - binary
+      Cache-Control:
+      - private
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"1b3ffd65c2a730757f49155b2c4c231b"'
+      Set-Cookie:
+      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:44 GMT; secure
+      X-Request-Id:
+      - caeaf8f3b279288d0b58deb39eb67970
+      X-Runtime:
+      - '0.030840'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! "---\nname: yard\ndownloads: 2057938\nversion: 0.8.7.3\nversion_downloads:
+        52069\nplatform: ruby\nauthors: Loren Segal\ninfo: ! \"    YARD is a documentation
+        generation tool for the Ruby programming language.\\n\n  \\   It enables the
+        user to generate consistent, usable documentation that can be\\n\n  \\   exported
+        to a number of formats very easily, and also supports extending for\\n\n  \\
+        \  custom Ruby constructs such as custom class level definitions.\\n\"\nlicenses:\n-
+        MIT\nproject_uri: http://rubygems.org/gems/yard\ngem_uri: http://rubygems.org/gems/yard-0.8.7.3.gem\nhomepage_uri:
+        http://yardoc.org\nwiki_uri: ''\ndocumentation_uri: http://rubydoc.info/docs/yard/frames\nmailing_list_uri:
+        http://groups.google.com/group/yardoc\nsource_code_uri: http://github.com/lsegal/yard\nbug_tracker_uri:
+        http://github.com/lsegal/yard/issues\ndependencies:\n  development: []\n  runtime:
+        []\n"
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 07:06:45 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/figaro.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Nov 2013 07:06:44 GMT
+      Content-Type:
+      - text/yaml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Disposition:
+      - attachment
+      Content-Transfer-Encoding:
+      - binary
+      Cache-Control:
+      - private
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"6bcbfbb154b1c17b12177e7393265d8f"'
+      Set-Cookie:
+      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:44 GMT; secure
+      X-Request-Id:
+      - 2d0947e60d70b6a385e8a98282b59fb1
+      X-Runtime:
+      - '0.032413'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! "---\nname: figaro\ndownloads: 244629\nversion: 0.7.0\nversion_downloads:
+        95692\nplatform: ruby\nauthors: Steve Richert\ninfo: Simple, Heroku-friendly
+        Rails app configuration using ENV and a single YAML\n  file\nlicenses:\n-
+        MIT\nproject_uri: http://rubygems.org/gems/figaro\ngem_uri: http://rubygems.org/gems/figaro-0.7.0.gem\nhomepage_uri:
+        https://github.com/laserlemon/figaro\nwiki_uri: ''\ndocumentation_uri: ''\nmailing_list_uri:
+        ''\nsource_code_uri: https://github.com/laserlemon/figaro\nbug_tracker_uri:
+        https://github.com/laserlemon/figaro/issues\ndependencies:\n  development:
+        []\n  runtime:\n  - name: bundler\n    requirements: ~> 1.0\n  - name: rails\n
+        \   requirements: < 5, >= 3\n"
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 07:06:46 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/capybara.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Nov 2013 07:06:44 GMT
+      Content-Type:
+      - text/yaml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Disposition:
+      - attachment
+      Content-Transfer-Encoding:
+      - binary
+      Cache-Control:
+      - private
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"4bb467de309971938b4a18cc63ef25b0"'
+      Set-Cookie:
+      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:44 GMT; secure
+      X-Request-Id:
+      - e670685cf9c3b6a88dade330f9b02855
+      X-Runtime:
+      - '0.044702'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: ! "---\nname: capybara\ndownloads: 5732523\nversion: 2.2.0\nversion_downloads:
+        10009\nplatform: ruby\nauthors: Jonas Nicklas\ninfo: Capybara is an integration
+        testing tool for rack based web applications. It\n  simulates how a user would
+        interact with a website\nlicenses:\n- MIT\nproject_uri: http://rubygems.org/gems/capybara\ngem_uri:
+        http://rubygems.org/gems/capybara-2.2.0.gem\nhomepage_uri: http://github.com/jnicklas/capybara\nwiki_uri:
+        \ndocumentation_uri: \nmailing_list_uri: \nsource_code_uri: \nbug_tracker_uri:
+        \ndependencies:\n  development:\n  - name: cucumber\n    requirements: ! '>=
+        0.10.5'\n  - name: fuubar\n    requirements: ! '>= 0.0.1'\n  - name: launchy\n
+        \   requirements: ! '>= 2.0.4'\n  - name: pry\n    requirements: ! '>= 0'\n
+        \ - name: rake\n    requirements: ! '>= 0'\n  - name: rspec\n    requirements:
+        ! '>= 2.2.0'\n  - name: selenium-webdriver\n    requirements: ~> 2.0\n  -
+        name: sinatra\n    requirements: ! '>= 0.9.4'\n  - name: yard\n    requirements:
+        ! '>= 0.5.8'\n  runtime:\n  - name: mime-types\n    requirements: ! '>= 1.16'\n
+        \ - name: nokogiri\n    requirements: ! '>= 1.3.3'\n  - name: rack\n    requirements:
+        ! '>= 1.0.0'\n  - name: rack-test\n    requirements: ! '>= 0.5.4'\n  - name:
+        xpath\n    requirements: ~> 2.0\n"
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 07:06:46 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/annotate_gemfile.yaml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Gems 0.8.3
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 27 Nov 2013 07:06:45 GMT
+      Content-Type:
+      - application/x-yaml; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 404 Not Found
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:45 GMT; secure
+      X-Request-Id:
+      - 01fac7169d6e6e190377f144145245db
+      X-Runtime:
+      - '0.008895'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: US-ASCII
+      string: This rubygem could not be found.
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 07:06:46 GMT
+recorded_with: VCR 2.8.0

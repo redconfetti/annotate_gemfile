@@ -17,7 +17,7 @@ describe AnnotateGemfile::Annotator do
       VCR.configure {|c| c.hook_into :webmock }
       VCR.use_cassette('rubygems.org/api/v1/gems/rails') do
         # http://rubygems.org/gems/rails/versions/4.0.1
-        result = subject.class.gem_info('rails', '4.0.1')
+        result = subject.class.gem_info('rails')
         expect(result).to be_an_instance_of Hash
         expect(result[:name]).to eq "rails"
         expect(result[:version]).to eq "4.0.1"
@@ -74,4 +74,49 @@ describe AnnotateGemfile::Annotator do
       expect { File.exist?(backup_file_path) }.to be_true
     end
   end
+
+  describe "#build_meta_gemfile" do
+    it "loads meta_gemfile" do
+      VCR.configure {|c| c.hook_into :webmock }
+      VCR.use_cassette('rubygems.org/api/v1/gems/build_meta_gemfile') do
+        subject.build_meta_gemfile
+      end
+      meta_gemfile = subject.instance_eval { @meta_gemfile }
+      expect(meta_gemfile).to be_an_instance_of Array
+      meta_gemfile.each do |line|
+        expect(line).to be_an_instance_of Hash
+        expect(line[:line_number]).to be_an_instance_of Fixnum
+        expect(line[:name]).to be_an_instance_of String
+      end
+    end
+
+    it "updates meta_gemfile with rubygem info" do
+      pending
+      VCR.use_cassette('rubygems.org/api/v1/gems/build_meta_gemfile') do
+        subject.build_meta_gemfile
+      end
+      meta_gemfile = subject.instance_eval { @meta_gemfile }
+      expect(meta_gemfile).to be_an_instance_of Array
+      meta_gemfile.each do |line|
+        expect(line).to be_an_instance_of Hash
+        expect(line[:rubygem_info]).to be_an_instance_of Hash
+        expect(line[:rubygem_info][:name]).to be_an_instance_of String
+        expect(line[:rubygem_info][:version]).to be_an_instance_of String
+        expect(line[:rubygem_info][:info]).to be_an_instance_of String
+        # expect(line[:rubygem_info][:source_code_uri]).to be_an_instance_of String
+      end
+    end
+
+    it "leads gemfile array" do
+      VCR.use_cassette('rubygems.org/api/v1/gems/build_meta_gemfile') do
+        subject.build_meta_gemfile
+      end
+      gemfile_array = subject.instance_eval { @gemfile_array }
+      expect(gemfile_array).to be_an_instance_of Array
+      gemfile_array.each do |line|
+        expect(line).to be_an_instance_of String
+      end
+    end
+  end
+
 end
