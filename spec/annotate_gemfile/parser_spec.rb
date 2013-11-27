@@ -38,31 +38,31 @@ describe AnnotateGemfile::Parser do
       expect(gemfile_array[19]).to eq "\n"
       expect(gemfile_array[20]).to eq "gem \"annotate_gemfile\", :path => '../../annotate_gemfile'\n"
       expect(gemfile_meta).to be_an_instance_of Array
-      expect(gemfile_meta[0][:line]).to eq 2
+      expect(gemfile_meta[0][:line_number]).to eq 2
       expect(gemfile_meta[0][:name]).to eq "sinatra"
-      expect(gemfile_meta[1][:line]).to eq 3
+      expect(gemfile_meta[1][:line_number]).to eq 3
       expect(gemfile_meta[1][:name]).to eq "thin"
-      expect(gemfile_meta[2][:line]).to eq 4
+      expect(gemfile_meta[2][:line_number]).to eq 4
       expect(gemfile_meta[2][:name]).to eq "rspec"
-      expect(gemfile_meta[3][:line]).to eq 5
+      expect(gemfile_meta[3][:line_number]).to eq 5
       expect(gemfile_meta[3][:name]).to eq "json"
-      expect(gemfile_meta[4][:line]).to eq 7
+      expect(gemfile_meta[4][:line_number]).to eq 7
       expect(gemfile_meta[4][:name]).to eq "nokogiri"
       expect(gemfile_meta[4][:source]).to be_an_instance_of Bundler::Source::Git
       expect(gemfile_meta[4][:source].uri).to eq "git://github.com/tenderlove/nokogiri.git"
       expect(gemfile_meta[4][:source].ref).to eq "v1.6.0"
-      expect(gemfile_meta[5][:line]).to eq 10
+      expect(gemfile_meta[5][:line_number]).to eq 10
       expect(gemfile_meta[5][:name]).to eq "lunchy"
       expect(gemfile_meta[5][:source]).to be_an_instance_of Bundler::Source::Git
       expect(gemfile_meta[5][:source].uri).to eq "git://github.com:mperham/lunchy.git"
       expect(gemfile_meta[5][:source].branch).to eq "master"
-      expect(gemfile_meta[6][:line]).to eq 14
+      expect(gemfile_meta[6][:line_number]).to eq 14
       expect(gemfile_meta[6][:name]).to eq "yard"
-      expect(gemfile_meta[7][:line]).to eq 17
+      expect(gemfile_meta[7][:line_number]).to eq 17
       expect(gemfile_meta[7][:name]).to eq "figaro"
-      expect(gemfile_meta[8][:line]).to eq 18
+      expect(gemfile_meta[8][:line_number]).to eq 18
       expect(gemfile_meta[8][:name]).to eq "capybara"
-      expect(gemfile_meta[9][:line]).to eq 20
+      expect(gemfile_meta[9][:line_number]).to eq 20
       expect(gemfile_meta[9][:name]).to eq "annotate_gemfile"
       expect(gemfile_meta[9][:source]).to be_an_instance_of Bundler::Source::Path
       expect(gemfile_meta[9][:source].path).to be_an_instance_of Pathname
@@ -180,7 +180,7 @@ describe AnnotateGemfile::Parser do
       gemfile_meta = subject.instance_eval { @gemfile_meta }
       expect(gemfile_meta).to be_an_instance_of Array
       expect(gemfile_meta[4]).to be_an_instance_of Hash
-      expect(gemfile_meta[4][:line]).to eq 7
+      expect(gemfile_meta[4][:line_number]).to eq 7
       expect(gemfile_meta[4][:name]).to eq "nokogiri"
       expect(gemfile_meta[4][:type]).to eq :runtime
       expect(gemfile_meta[4][:source]).to be_an_instance_of Bundler::Source::Git
@@ -189,7 +189,7 @@ describe AnnotateGemfile::Parser do
       expect(gemfile_meta[4][:source].ref).to eq "v1.6.0"
       expect(gemfile_meta[4][:platforms]).to eq []
       expect(gemfile_meta[4][:requirement]).to be_an_instance_of Gem::Requirement
-      expect(gemfile_meta[5][:line]).to eq 10
+      expect(gemfile_meta[5][:line_number]).to eq 10
       expect(gemfile_meta[5][:name]).to eq "lunchy"
       expect(gemfile_meta[5][:source]).to be_an_instance_of Bundler::Source::Git
       expect(gemfile_meta[5][:source].uri).to eq "git://github.com:mperham/lunchy.git"

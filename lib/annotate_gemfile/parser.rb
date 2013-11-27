@@ -65,7 +65,7 @@ module AnnotateGemfile
           gem_name = self.class.extract_gemname(line)
           dependency = find_dependency(gem_name)
           raise RuntimeError, "Dependency not found" if dependency == nil
-          gem_hash = { :line => index, :name => gem_name }
+          gem_hash = { :line_number => index, :name => gem_name }
           gem_hash[:type] = dependency.type
           gem_hash[:requirement] = dependency.requirement
           gem_hash[:source] = dependency.source
