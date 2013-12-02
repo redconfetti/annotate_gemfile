@@ -91,20 +91,23 @@ describe AnnotateGemfile::Annotator do
     end
 
     it "updates meta_gemfile with rubygem info" do
-      pending
+      VCR.configure {|c| c.hook_into :webmock }
       VCR.use_cassette('rubygems.org/api/v1/gems/build_meta_gemfile') do
         subject.build_meta_gemfile
       end
       meta_gemfile = subject.instance_eval { @meta_gemfile }
       expect(meta_gemfile).to be_an_instance_of Array
+      expect(meta_gemfile.count).to eq 10
       meta_gemfile.each do |line|
-        expect(line).to be_an_instance_of Hash
-        expect(line[:rubygem_info]).to be_an_instance_of Hash
-        expect(line[:rubygem_info][:name]).to be_an_instance_of String
-        expect(line[:rubygem_info][:version]).to be_an_instance_of String
-        expect(line[:rubygem_info][:info]).to be_an_instance_of String
-        # expect(line[:rubygem_info][:source_code_uri]).to be_an_instance_of String
+        if line[:source].class != Bundler::Source::Path
+          expect(line).to be_an_instance_of Hash
+          expect(line[:rubygem_info]).to be_an_instance_of Hash
+          expect(line[:rubygem_info][:name]).to be_an_instance_of String
+          expect(line[:rubygem_info][:version]).to be_an_instance_of String
+          expect(line[:rubygem_info][:info]).to be_an_instance_of String
+        end
       end
+      puts "annotate_gemfile: #{meta_gemfile[9].inspect}"
     end
 
     it "leads gemfile array" do
@@ -116,6 +119,12 @@ describe AnnotateGemfile::Annotator do
       gemfile_array.each do |line|
         expect(line).to be_an_instance_of String
       end
+    end
+  end
+
+  describe "#populate_github_metadata" do
+    it "populates meta gemfile with github info" do
+      pending
     end
   end
 

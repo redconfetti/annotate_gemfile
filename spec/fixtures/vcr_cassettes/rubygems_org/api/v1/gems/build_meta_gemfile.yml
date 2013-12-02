@@ -26,7 +26,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 27 Nov 2013 07:06:42 GMT
+      - Mon, 02 Dec 2013 03:48:51 GMT
       Content-Type:
       - text/yaml
       Transfer-Encoding:
@@ -47,19 +47,19 @@ http_interactions:
       - IE=Edge,chrome=1
       - IE=Edge,chrome=1
       Etag:
-      - ! '"69ec3359c9951e34b792d51647b34f1c"'
+      - ! '"9be137fdd22bc509218b7ed47af84fa2"'
       Set-Cookie:
-      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:42 GMT; secure
+      - remember_token=; path=/; expires=Tue, 02-Dec-2014 03:48:51 GMT; secure
       X-Request-Id:
-      - 3c85937ac98a0c0dd96c96a309ad8d30
+      - f2687d144c9d15e1c60d19484888e935
       X-Runtime:
-      - '0.030841'
+      - '0.032723'
       X-Rack-Cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! "---\nname: sinatra\ndownloads: 10488277\nversion: 1.4.4\nversion_downloads:
-        208491\nplatform: ruby\nauthors: Blake Mizerany, Ryan Tomayko, Simon Rozet,
+      string: ! "---\nname: sinatra\ndownloads: 10552638\nversion: 1.4.4\nversion_downloads:
+        229023\nplatform: ruby\nauthors: Blake Mizerany, Ryan Tomayko, Simon Rozet,
         Konstantin Haase\ninfo: Sinatra is a DSL for quickly creating web applications
         in Ruby with minimal\n  effort.\nlicenses: []\nproject_uri: http://rubygems.org/gems/sinatra\ngem_uri:
         http://rubygems.org/gems/sinatra-1.4.4.gem\nhomepage_uri: http://www.sinatrarb.com/\nwiki_uri:
@@ -69,7 +69,7 @@ http_interactions:
         \ - name: rack-protection\n    requirements: ~> 1.4\n  - name: tilt\n    requirements:
         ! '>= 1.3.4, ~> 1.3'\n"
     http_version: 
-  recorded_at: Wed, 27 Nov 2013 07:06:43 GMT
+  recorded_at: Mon, 02 Dec 2013 03:48:52 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/thin.yaml
@@ -96,7 +96,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 27 Nov 2013 07:06:42 GMT
+      - Mon, 02 Dec 2013 03:48:52 GMT
       Content-Type:
       - text/yaml
       Transfer-Encoding:
@@ -117,19 +117,19 @@ http_interactions:
       - IE=Edge,chrome=1
       - IE=Edge,chrome=1
       Etag:
-      - ! '"024c94eb8c516d38857a1d880caeeaba"'
+      - ! '"cf10d01bf79694809748560616ec5b96"'
       Set-Cookie:
-      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:42 GMT; secure
+      - remember_token=; path=/; expires=Tue, 02-Dec-2014 03:48:52 GMT; secure
       X-Request-Id:
-      - 5907dd11943c5b606ec3bf042135e595
+      - 10bd5d51b14e3b96819ab30ea6d49624
       X-Runtime:
-      - '0.035048'
+      - '0.031754'
       X-Rack-Cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! "---\nname: thin\ndownloads: 5889173\nversion: 1.6.1\nversion_downloads:
-        87391\nplatform: ruby\nauthors: Marc-Andre Cournoyer\ninfo: A thin and fast
+      string: ! "---\nname: thin\ndownloads: 5926843\nversion: 1.6.1\nversion_downloads:
+        99629\nplatform: ruby\nauthors: Marc-Andre Cournoyer\ninfo: A thin and fast
         web server\nlicenses:\n- Ruby\nproject_uri: http://rubygems.org/gems/thin\ngem_uri:
         http://rubygems.org/gems/thin-1.6.1.gem\nhomepage_uri: http://code.macournoyer.com/thin/\nwiki_uri:
         \ndocumentation_uri: \nmailing_list_uri: \nsource_code_uri: \nbug_tracker_uri:
@@ -137,7 +137,7 @@ http_interactions:
         ! '>= 1.0.9'\n  - name: eventmachine\n    requirements: ! '>= 1.0.0'\n  -
         name: rack\n    requirements: ! '>= 1.0.0'\n"
     http_version: 
-  recorded_at: Wed, 27 Nov 2013 07:06:44 GMT
+  recorded_at: Mon, 02 Dec 2013 03:48:52 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/rspec.yaml
@@ -164,7 +164,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 27 Nov 2013 07:06:42 GMT
+      - Mon, 02 Dec 2013 03:48:52 GMT
       Content-Type:
       - text/yaml
       Transfer-Encoding:
@@ -185,19 +185,19 @@ http_interactions:
       - IE=Edge,chrome=1
       - IE=Edge,chrome=1
       Etag:
-      - ! '"75cac1842c15bf7067e732e51d3fb71d"'
+      - ! '"cdc254f5aa60e8845ff8c389bb863582"'
       Set-Cookie:
-      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:42 GMT; secure
+      - remember_token=; path=/; expires=Tue, 02-Dec-2014 03:48:52 GMT; secure
       X-Request-Id:
-      - 1f683362f7f4bb1f56d32165938338d1
+      - f7fd7e6852e00306171bcd10ec3316ba
       X-Runtime:
-      - '0.034093'
+      - '0.034945'
       X-Rack-Cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! "---\nname: rspec\ndownloads: 11833469\nversion: 2.14.1\nversion_downloads:
-        1211049\nplatform: ruby\nauthors: Steven Baker, David Chelimsky\ninfo: BDD
+      string: ! "---\nname: rspec\ndownloads: 11894461\nversion: 2.14.1\nversion_downloads:
+        1246535\nplatform: ruby\nauthors: Steven Baker, David Chelimsky\ninfo: BDD
         for Ruby\nlicenses:\n- MIT\nproject_uri: http://rubygems.org/gems/rspec\ngem_uri:
         http://rubygems.org/gems/rspec-2.14.1.gem\nhomepage_uri: http://github.com/rspec\nwiki_uri:
         ''\ndocumentation_uri: http://relishapp.com/rspec\nmailing_list_uri: http://rubyforge.org/mailman/listinfo/rspec-users\nsource_code_uri:
@@ -206,7 +206,7 @@ http_interactions:
         rspec-expectations\n    requirements: ~> 2.14.0\n  - name: rspec-mocks\n    requirements:
         ~> 2.14.0\n"
     http_version: 
-  recorded_at: Wed, 27 Nov 2013 07:06:44 GMT
+  recorded_at: Mon, 02 Dec 2013 03:48:53 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/json.yaml
@@ -233,7 +233,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 27 Nov 2013 07:06:43 GMT
+      - Mon, 02 Dec 2013 03:48:53 GMT
       Content-Type:
       - text/yaml
       Transfer-Encoding:
@@ -254,19 +254,19 @@ http_interactions:
       - IE=Edge,chrome=1
       - IE=Edge,chrome=1
       Etag:
-      - ! '"8a50eb152b9bb50f60c8139bffd26d1c"'
+      - ! '"6cefbfb7e821fee75f50daf12fcf1596"'
       Set-Cookie:
-      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:43 GMT; secure
+      - remember_token=; path=/; expires=Tue, 02-Dec-2014 03:48:53 GMT; secure
       X-Request-Id:
-      - 7bb95c8d2b4a67fed06b7ec9a4660a76
+      - 6f39b3ccae7d0d315af03b480405f6c9
       X-Runtime:
-      - '0.094311'
+      - '0.035086'
       X-Rack-Cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! "---\nname: json\ndownloads: 29249775\nversion: 1.8.1\nversion_downloads:
-        1090151\nplatform: ruby\nauthors: Florian Frank\ninfo: This is a JSON implementation
+      string: ! "---\nname: json\ndownloads: 29427515\nversion: 1.8.1\nversion_downloads:
+        1189093\nplatform: ruby\nauthors: Florian Frank\ninfo: This is a JSON implementation
         as a Ruby extension in C.\nlicenses:\n- Ruby\nproject_uri: http://rubygems.org/gems/json\ngem_uri:
         http://rubygems.org/gems/json-1.8.1.gem\nhomepage_uri: http://json-jruby.rubyforge.org/\nwiki_uri:
         ''\ndocumentation_uri: http://flori.github.com/json/doc/index.html\nmailing_list_uri:
@@ -274,7 +274,7 @@ http_interactions:
         \ development:\n  - name: permutation\n    requirements: ! '>= 0'\n  - name:
         sdoc\n    requirements: ~> 0.3.16\n  runtime: []\n"
     http_version: 
-  recorded_at: Wed, 27 Nov 2013 07:06:44 GMT
+  recorded_at: Mon, 02 Dec 2013 03:48:53 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/nokogiri.yaml
@@ -304,7 +304,7 @@ http_interactions:
         bmdpbng=
       !binary "RGF0ZQ==":
       - !binary |-
-        V2VkLCAyNyBOb3YgMjAxMyAwNzowNjo0MyBHTVQ=
+        TW9uLCAwMiBEZWMgMjAxMyAwMzo0ODo1NCBHTVQ=
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
         dGV4dC95YW1s
@@ -336,25 +336,25 @@ http_interactions:
         SUU9RWRnZSxjaHJvbWU9MQ==
       !binary "RXRhZw==":
       - !binary |-
-        IjY0YWIwZDA0ZmViYzljYmZhYzBjMjUwYmRmZDJjNmM5Ig==
+        IjZhODc5YTYyZGE5ZjA0MmM5NmMzZjJkNjczNjBjM2NhIg==
       !binary "U2V0LUNvb2tpZQ==":
       - !binary |-
-        cmVtZW1iZXJfdG9rZW49OyBwYXRoPS87IGV4cGlyZXM9VGh1LCAyNy1Ob3Yt
-        MjAxNCAwNzowNjo0MyBHTVQ7IHNlY3VyZQ==
+        cmVtZW1iZXJfdG9rZW49OyBwYXRoPS87IGV4cGlyZXM9VHVlLCAwMi1EZWMt
+        MjAxNCAwMzo0ODo1NCBHTVQ7IHNlY3VyZQ==
       !binary "WC1SZXF1ZXN0LUlk":
       - !binary |-
-        Y2Y3YzZkMWEzNDJmOTViMTliMGRjZDg2NDBhYjhlMTg=
+        MmI1MDllY2NlYzQ3NWZkNzhlZDg2NGRjNjUxNTdmNDA=
       !binary "WC1SdW50aW1l":
       - !binary |-
-        MC4wNDAyNjE=
+        MC4wNDAyMDI=
       !binary "WC1SYWNrLUNhY2hl":
       - !binary |-
         bWlzcw==
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        LS0tCm5hbWU6IG5va29naXJpCmRvd25sb2FkczogMTY4Nzk3MzcKdmVyc2lv
-        bjogMS42LjAKdmVyc2lvbl9kb3dubG9hZHM6IDE2OTM4OTYKcGxhdGZvcm06
+        LS0tCm5hbWU6IG5va29naXJpCmRvd25sb2FkczogMTY5ODI3NTgKdmVyc2lv
+        bjogMS42LjAKdmVyc2lvbl9kb3dubG9hZHM6IDE3NDIxNTUKcGxhdGZvcm06
         IHJ1YnkKYXV0aG9yczogQWFyb24gUGF0dGVyc29uLCBNaWtlIERhbGVzc2lv
         LCBZb2tvIEhhcmFkYSwgVGltIEVsbGlvdHQKaW5mbzogISAnTm9rb2dpcmkg
         KOmLuCkgaXMgYW4gSFRNTCwgWE1MLCBTQVgsIGFuZCBSZWFkZXIgcGFyc2Vy
@@ -386,7 +386,7 @@ http_interactions:
         ICEgJz49IDEuMC41JwogIHJ1bnRpbWU6CiAgLSBuYW1lOiBtaW5pX3BvcnRp
         bGUKICAgIHJlcXVpcmVtZW50czogfj4gMC41LjAK
     http_version: 
-  recorded_at: Wed, 27 Nov 2013 07:06:45 GMT
+  recorded_at: Mon, 02 Dec 2013 03:48:54 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/lunchy.yaml
@@ -413,7 +413,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 27 Nov 2013 07:06:43 GMT
+      - Mon, 02 Dec 2013 03:48:54 GMT
       Content-Type:
       - text/yaml
       Transfer-Encoding:
@@ -434,25 +434,25 @@ http_interactions:
       - IE=Edge,chrome=1
       - IE=Edge,chrome=1
       Etag:
-      - ! '"c9ae38a7f16ae7953ec4265ef7ed55e0"'
+      - ! '"f15ade234ef65c14bfd69d61016f464a"'
       Set-Cookie:
-      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:43 GMT; secure
+      - remember_token=; path=/; expires=Tue, 02-Dec-2014 03:48:54 GMT; secure
       X-Request-Id:
-      - d8401697c7493f193a882be5761fe3e4
+      - 23f6cc3c2b64e71c7b47686342608eb1
       X-Runtime:
-      - '0.029718'
+      - '0.030468'
       X-Rack-Cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! "---\nname: lunchy\ndownloads: 39762\nversion: 0.7.0\nversion_downloads:
-        9238\nplatform: ruby\nauthors: Mike Perham\ninfo: Friendly wrapper around
+      string: ! "---\nname: lunchy\ndownloads: 40078\nversion: 0.7.0\nversion_downloads:
+        9525\nplatform: ruby\nauthors: Mike Perham\ninfo: Friendly wrapper around
         launchctl\nlicenses: []\nproject_uri: http://rubygems.org/gems/lunchy\ngem_uri:
         http://rubygems.org/gems/lunchy-0.7.0.gem\nhomepage_uri: http://github.com/mperham/lunchy\nwiki_uri:
         \ndocumentation_uri: \nmailing_list_uri: \nsource_code_uri: \nbug_tracker_uri:
         \ndependencies:\n  development: []\n  runtime: []\n"
     http_version: 
-  recorded_at: Wed, 27 Nov 2013 07:06:45 GMT
+  recorded_at: Mon, 02 Dec 2013 03:48:54 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/yard.yaml
@@ -479,7 +479,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 27 Nov 2013 07:06:44 GMT
+      - Mon, 02 Dec 2013 03:48:55 GMT
       Content-Type:
       - text/yaml
       Transfer-Encoding:
@@ -500,19 +500,19 @@ http_interactions:
       - IE=Edge,chrome=1
       - IE=Edge,chrome=1
       Etag:
-      - ! '"1b3ffd65c2a730757f49155b2c4c231b"'
+      - ! '"96bef12796d3385adbccf6a40dbf9d67"'
       Set-Cookie:
-      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:44 GMT; secure
+      - remember_token=; path=/; expires=Tue, 02-Dec-2014 03:48:55 GMT; secure
       X-Request-Id:
-      - caeaf8f3b279288d0b58deb39eb67970
+      - cc596f200cb573e61a9ad647549c7e00
       X-Runtime:
-      - '0.030840'
+      - '0.032027'
       X-Rack-Cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! "---\nname: yard\ndownloads: 2057938\nversion: 0.8.7.3\nversion_downloads:
-        52069\nplatform: ruby\nauthors: Loren Segal\ninfo: ! \"    YARD is a documentation
+      string: ! "---\nname: yard\ndownloads: 2073927\nversion: 0.8.7.3\nversion_downloads:
+        60104\nplatform: ruby\nauthors: Loren Segal\ninfo: ! \"    YARD is a documentation
         generation tool for the Ruby programming language.\\n\n  \\   It enables the
         user to generate consistent, usable documentation that can be\\n\n  \\   exported
         to a number of formats very easily, and also supports extending for\\n\n  \\
@@ -523,7 +523,7 @@ http_interactions:
         http://github.com/lsegal/yard/issues\ndependencies:\n  development: []\n  runtime:
         []\n"
     http_version: 
-  recorded_at: Wed, 27 Nov 2013 07:06:45 GMT
+  recorded_at: Mon, 02 Dec 2013 03:48:55 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/figaro.yaml
@@ -550,7 +550,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 27 Nov 2013 07:06:44 GMT
+      - Mon, 02 Dec 2013 03:48:55 GMT
       Content-Type:
       - text/yaml
       Transfer-Encoding:
@@ -571,19 +571,19 @@ http_interactions:
       - IE=Edge,chrome=1
       - IE=Edge,chrome=1
       Etag:
-      - ! '"6bcbfbb154b1c17b12177e7393265d8f"'
+      - ! '"47f15d8636562e81b9a8c72afedf2a4b"'
       Set-Cookie:
-      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:44 GMT; secure
+      - remember_token=; path=/; expires=Tue, 02-Dec-2014 03:48:55 GMT; secure
       X-Request-Id:
-      - 2d0947e60d70b6a385e8a98282b59fb1
+      - b56e69e93c2bf4a876d89021e8389572
       X-Runtime:
-      - '0.032413'
+      - '0.032723'
       X-Rack-Cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! "---\nname: figaro\ndownloads: 244629\nversion: 0.7.0\nversion_downloads:
-        95692\nplatform: ruby\nauthors: Steve Richert\ninfo: Simple, Heroku-friendly
+      string: ! "---\nname: figaro\ndownloads: 248053\nversion: 0.7.0\nversion_downloads:
+        98667\nplatform: ruby\nauthors: Steve Richert\ninfo: Simple, Heroku-friendly
         Rails app configuration using ENV and a single YAML\n  file\nlicenses:\n-
         MIT\nproject_uri: http://rubygems.org/gems/figaro\ngem_uri: http://rubygems.org/gems/figaro-0.7.0.gem\nhomepage_uri:
         https://github.com/laserlemon/figaro\nwiki_uri: ''\ndocumentation_uri: ''\nmailing_list_uri:
@@ -592,7 +592,7 @@ http_interactions:
         []\n  runtime:\n  - name: bundler\n    requirements: ~> 1.0\n  - name: rails\n
         \   requirements: < 5, >= 3\n"
     http_version: 
-  recorded_at: Wed, 27 Nov 2013 07:06:46 GMT
+  recorded_at: Mon, 02 Dec 2013 03:48:55 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/capybara.yaml
@@ -619,7 +619,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 27 Nov 2013 07:06:44 GMT
+      - Mon, 02 Dec 2013 03:48:56 GMT
       Content-Type:
       - text/yaml
       Transfer-Encoding:
@@ -640,19 +640,19 @@ http_interactions:
       - IE=Edge,chrome=1
       - IE=Edge,chrome=1
       Etag:
-      - ! '"4bb467de309971938b4a18cc63ef25b0"'
+      - ! '"2d61fa22c0167af644259b6fd0f12013"'
       Set-Cookie:
-      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:44 GMT; secure
+      - remember_token=; path=/; expires=Tue, 02-Dec-2014 03:48:56 GMT; secure
       X-Request-Id:
-      - e670685cf9c3b6a88dade330f9b02855
+      - 1185618bf8b89a3db84a1c4cf62f4901
       X-Runtime:
-      - '0.044702'
+      - '0.041589'
       X-Rack-Cache:
       - miss
     body:
       encoding: US-ASCII
-      string: ! "---\nname: capybara\ndownloads: 5732523\nversion: 2.2.0\nversion_downloads:
-        10009\nplatform: ruby\nauthors: Jonas Nicklas\ninfo: Capybara is an integration
+      string: ! "---\nname: capybara\ndownloads: 5764541\nversion: 2.2.0\nversion_downloads:
+        16730\nplatform: ruby\nauthors: Jonas Nicklas\ninfo: Capybara is an integration
         testing tool for rack based web applications. It\n  simulates how a user would
         interact with a website\nlicenses:\n- MIT\nproject_uri: http://rubygems.org/gems/capybara\ngem_uri:
         http://rubygems.org/gems/capybara-2.2.0.gem\nhomepage_uri: http://github.com/jnicklas/capybara\nwiki_uri:
@@ -668,7 +668,7 @@ http_interactions:
         ! '>= 1.0.0'\n  - name: rack-test\n    requirements: ! '>= 0.5.4'\n  - name:
         xpath\n    requirements: ~> 2.0\n"
     http_version: 
-  recorded_at: Wed, 27 Nov 2013 07:06:46 GMT
+  recorded_at: Mon, 02 Dec 2013 03:48:56 GMT
 - request:
     method: get
     uri: https://rubygems.org/api/v1/gems/annotate_gemfile.yaml
@@ -695,7 +695,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 27 Nov 2013 07:06:45 GMT
+      - Mon, 02 Dec 2013 03:48:56 GMT
       Content-Type:
       - application/x-yaml; charset=utf-8
       Transfer-Encoding:
@@ -711,16 +711,16 @@ http_interactions:
       Cache-Control:
       - no-cache
       Set-Cookie:
-      - remember_token=; path=/; expires=Thu, 27-Nov-2014 07:06:45 GMT; secure
+      - remember_token=; path=/; expires=Tue, 02-Dec-2014 03:48:56 GMT; secure
       X-Request-Id:
-      - 01fac7169d6e6e190377f144145245db
+      - bf5d2db4dd852ce4ae5db1b83791d042
       X-Runtime:
-      - '0.008895'
+      - '0.009213'
       X-Rack-Cache:
       - miss
     body:
       encoding: US-ASCII
       string: This rubygem could not be found.
     http_version: 
-  recorded_at: Wed, 27 Nov 2013 07:06:46 GMT
+  recorded_at: Mon, 02 Dec 2013 03:48:56 GMT
 recorded_with: VCR 2.8.0

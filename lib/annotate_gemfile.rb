@@ -65,9 +65,16 @@ module AnnotateGemfile
       parser = AnnotateGemfile::Parser.parse(@gemfile_path)
       @meta_gemfile = parser.gemfile_meta
       @meta_gemfile.collect! do |line|
-        line.merge( {:rubygem_info => self.class.gem_info(line[:name])} )
+        if line[:source].class != Bundler::Source::Path
+          line.merge( {:rubygem_info => self.class.gem_info(line[:name])} )
+        else
+          line
+        end
       end
       @gemfile_array = parser.gemfile_array
+    end
+
+    def populate_github_metadata
     end
 
   end
