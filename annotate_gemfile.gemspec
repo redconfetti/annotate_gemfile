@@ -19,24 +19,27 @@ Gem::Specification.new do |spec|
   spec.require_paths    = ["lib"]
 
   # https://github.com/rspec/rspec
-  spec.add_development_dependency "rspec", "~> 2.14.1"
+  spec.add_development_dependency "rspec", "~> 3.9.0"
+
+  # https://github.com/rspec/rspec-its
+  spec.add_development_dependency "rspec-its", "~> 1.3.0"
 
   # https://github.com/vcr/vcr
-  spec.add_development_dependency "vcr", "~> 2.8.0"
+  spec.add_development_dependency "vcr", "~> 6.0.0"
 
   # https://github.com/bblimke/webmock
-  spec.add_development_dependency "webmock", "1.15.2"
+  spec.add_development_dependency "webmock", "3.9.3"
 
   # https://github.com/bundler/bundler
-  spec.add_runtime_dependency "bundler", "~> 1.3"
+  spec.add_runtime_dependency "bundler", "~> 2.1.4"
 
   # https://github.com/jimweirich/rake
   spec.add_runtime_dependency "rake"
 
   # https://github.com/rubygems/gems
-  spec.add_runtime_dependency 'gems', '~> 0.8.3'
+  spec.add_runtime_dependency 'gems', '~> 1.2.0'
 
   # https://github.com/peter-murach/github
-  spec.add_runtime_dependency 'github_api', '~> 0.10.2'
+  spec.add_runtime_dependency 'github_api', '~> 0.19.0'
 
 end

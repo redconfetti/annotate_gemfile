@@ -6,6 +6,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'annotate_gemfile'
+require 'rspec/its'
 require 'webmock/rspec'
 require 'vcr'
 
