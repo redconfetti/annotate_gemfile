@@ -17,7 +17,7 @@ gem 'rspec', :require => 'spec'
 # http://flori.github.io/json/
 gem 'json'
 
-gem 'nokogiri', :git => 'git://github.com/tenderlove/nokogiri.git', :tag => 'v1.6.0'
+gem 'nokogiri', :git => 'git://github.com/tenderlove/nokogiri.git', :tag => 'v1.10.10'
 
 group :development do
   gem "lunchy", :git => 'git://github.com:mperham/lunchy.git', :branch => 'master'
@@ -26,7 +26,7 @@ end
 group :doc do
   # YARD is a Ruby Documentation tool
   # https://github.com/lsegal/yard
-  gem "yard", "~> 0.8.7"
+  gem "yard", "~> 0.9.11"
 end
 
 gem "figaro"
